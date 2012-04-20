@@ -13,6 +13,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ZenCoding.vim'
 Bundle 'AutoClose'
+Bundle 'tpope/vim-rails'
 
 filetype plugin indent on
 
@@ -188,4 +189,5 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
 
 " map CTRL-S to save instead :w
 imap <C-S> <C-C>:w<CR>
+
 
