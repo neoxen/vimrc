@@ -11,7 +11,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
-
+Bundle 'ZenCoding.vim'
+Bundle 'AutoClose'
 
 filetype plugin indent on
 
@@ -59,6 +60,9 @@ set backspace=indent,eol,start
 " line number
 set number 
 set selection=inclusive
+
+" basedir
+set bsdir=buffer
 
 " set default gui font
 set guifont=Monaco:h10:cANSI
@@ -181,4 +185,7 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
             \ '\.o$', '\.so$', '\.egg$' ]
 
 " -------------------- }}}
+
+" map CTRL-S to save instead :w
+imap <C-S> <C-C>:w<CR>
 
