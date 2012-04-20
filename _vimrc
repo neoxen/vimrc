@@ -40,7 +40,93 @@ function MyDiff()
 endfunction
 
 syntax enable
+
+" ---- solarized
 set background=dark
 colorscheme solarized
 
+" ---- window size
+set lines=30 columns=120
+
+" ---- no backup file and swap file
+set nobackup
+set noswapfile
+
+" normal settings
+set helplang=cn 
+set backspace=indent,eol,start 
+" line number
+set number 
+set selection=inclusive
+
+" set default gui font
+set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+set gfw=Yahei_Mono:h10.5:cGB2312
+
+" file encoding
+set encoding=cp936
+set fileencoding=utf-8
+set fileencodings=utf-8,cp936,big5,latin1
+
+" command line mode
+set wildmenu
+
+" welcome screen
+set shortmess=atI
+
+" status line information
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [Line:%l/%L]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
+" prevent special asia characters from false display
+set ambiwidth=double
+
+" line break support for asia languages
+set fo+=mB
+
+" highlight search result
+set hlsearch 
+
+" tab length
+set ts=4 
+
+" indent length
+set sw=4 
+set sm 
+syntax on 
+
+" incsearch
+set is
+
+" ruler
+set ru
+
+"Set to auto read when a file is changed from the outside
+set autoread
+
+"The commandbar is  high
+set cmdheight=1
+
+"show matching bracet
+set showmatch
+
+"Auto indent
+set ai
+
+"Smart indet
+set si
+
+" change color theme after entering edit mode
+if version >= 700
+  au InsertEnter * hi StatusLine guibg=#818D29 guifg=#FCFCFC gui=none
+  au InsertLeave * hi StatusLine guibg=#EEEEEE guifg=#363636 gui=none
+endif
+ 
+" close tool box 
+set guioptions=
+
+"Wrap line
+set wrap
+
+"Sets how many lines of history VIM has to remember
+set history=400
 
