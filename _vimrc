@@ -10,6 +10,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdtree'
 
 
 filetype plugin indent on
@@ -60,8 +61,9 @@ set number
 set selection=inclusive
 
 " set default gui font
-set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
-set gfw=Yahei_Mono:h10.5:cGB2312
+set guifont=Monaco:h10:cANSI
+"set gfw=Yahei_Mono:h10.5:cGB2312
+"set gfw=Microsoft_YaHei:h10:cGB2312
 
 " file encoding
 set encoding=cp936
@@ -135,5 +137,48 @@ set guioptions=
 set wrap
 
 "Sets how many lines of history VIM has to remember
-set history=400
+set history=1000
+
+" ------------------- NERDTree settings {{{
+" auto start NERDTree at vim startup *too slow for large directories or blank
+" start
+"autocmd vimenter * NERDTree
+"key bind F3
+nnoremap <F3> :NERDTreeToggle <CR>
+" auto close vim when NERDTree is the last window vim left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Put focus to the NERD Tree with F3 (tricked by quickly closing it and
+" immediately showing it again, since there is no :NERDTreeFocus command)
+nmap <leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
+nmap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
+nmap <leader>N :NERDTreeClose<CR>
+
+" Store the bookmarks file
+let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+
+" Show the bookmarks table on startup
+let NERDTreeShowBookmarks=1
+
+" Show hidden files, too
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
+
+let NERDChristmasTree=0
+
+" Quit on opening files from the tree
+let NERDTreeQuitOnOpen=0
+
+" Highlight the selected entry in the tree
+let NERDTreeHighlightCursorline=1
+
+" Use a single click to fold/unfold directories and a double click to open
+" files
+let NERDTreeMouseMode=2
+
+" Don't display these kinds of files
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
+            \ '\.o$', '\.so$', '\.egg$' ]
+
+" -------------------- }}}
 
