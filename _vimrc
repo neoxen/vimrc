@@ -74,6 +74,13 @@ set wildmenu
 " welcome screen
 set shortmess=atI
 
+" tell VIM to always put a status line in, even
+"    if there is only one window
+set laststatus=2  
+
+" use a status bar that is 2 rows high
+set cmdheight=2                 
+
 " status line information
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [Line:%l/%L]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
