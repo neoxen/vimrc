@@ -15,6 +15,7 @@ Bundle 'ZenCoding.vim'
 Bundle 'AutoClose'
 Bundle 'tpope/vim-rails'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
