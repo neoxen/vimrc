@@ -14,6 +14,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ZenCoding.vim'
 Bundle 'AutoClose'
 Bundle 'tpope/vim-rails'
+Bundle 'fholgado/minibufexpl.vim'
 
 filetype plugin indent on
 
@@ -190,4 +191,7 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
 " map CTRL-S to save instead :w
 imap <C-S> <C-C>:w<CR>
 
+"---------------------------------- MiniBufExplorer {{{
+nnoremap <F4> :TMiniBufExplorer <CR>
+"---------------------------------- }}}
 
