@@ -113,10 +113,14 @@ syntax enable
 
 " ---- solarized
 set background=dark
-colorscheme solarized
+colorscheme solarized 
 
 " ---- window size
-set lines=30 columns=120
+set lines=40 columns=120
+
+" ---- guifont
+set guifont=Consolas:h14
+set guifontwide=Microsoft\ YaHei:h14
 
 " ---- no backup file and swap file
 set nobackup
