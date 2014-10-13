@@ -1,4 +1,4 @@
-set number
+" set number
 set selection=inclusive
 syntax on
 set is
